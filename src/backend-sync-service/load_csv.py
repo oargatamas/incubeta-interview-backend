@@ -9,6 +9,7 @@ def load_csv_delta():
                          'lowest_fare_economy_return': convertStringToNumber,
                          'lowest_fare_premium_oneway': convertStringToNumber,
                          'lowest_fare_premium_return': convertStringToNumber,
+                         # Todo map data of departures from the inbound URLs query params
                      })
     #df['id'] = None
     df.to_sql('fare_prices', connStr, if_exists='append', index=False)
