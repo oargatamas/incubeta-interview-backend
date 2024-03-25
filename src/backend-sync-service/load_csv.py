@@ -1,7 +1,6 @@
 import dask.dataframe as dd
 
-#connStr =  'mysql+pymysql://incubeta_ads:incubeta_ads@mysql-router/incubeta_ads?charset=utf8mb4'
-connStr =  'mysql+pymysql://incubeta_ads:incubeta_ads@localhost:6446/incubeta_ads?charset=utf8mb4'
+connStr =  'mysql+pymysql://incubeta_ads:incubeta_ads@localhost:6446/incubeta_ads?charset=utf8mb4' # Todo move to ENV variable
 def load_csv_delta():
 
     df = dd.read_csv('../../resources/file_2.csv', blocksize=25e6,
